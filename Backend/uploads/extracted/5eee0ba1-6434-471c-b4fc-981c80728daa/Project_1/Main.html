@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Website</title>
+    <link rel="stylesheet" type="text/css" href="C:\Study\Project_1\style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://pngimg.com/uploads/amazon/amazon_PNG7.png" alt="Shopping Website Logo" height="75" width="75">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="F:\Project_1\Header\categories.html" target=”_blank”>Categories</a></li>
+                    <li><a href="F:\Project_1\Header\products.html" target=”_blank”>Products</a></li>
+                    <li><a href="F:\Project_1\Header\about.html" target=”_blank”>About Us</a></li>
+                    <li><a href="F:\Project_1\Header\contact.html" target=”_blank”>Contact Us</a></li>
+                </ul>
+                <div class="search-bar">
+                    <input type="search" id="myInput" placeholder="Search for products...">&ensp; &ensp; 
+                    <button onclick="checkInput()" type="submit">Search</button>
+                </div><br>
+                <div class="cart-dropdown">
+                    <a href="F:\Project_1\Header\cart.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Cart (0 items)</span>
+                    </a>
+                    <ul class="cart-items">
+                        <!-- cart items will be displayed here -->
+                    </ul>
+                </div><br>
+                <div class="account-dropdown">
+                    <a href="F:\Project_1\Header\account.html">
+                        <i class="fas fa-user"></i>
+                        <span>Account</span>
+                    </a>
+                    <ul class="account-links">
+                        <li><a href="F:\Project_1\Header\login.html" target=”_blank”>Login</a></li>
+                        <li><a href="F:\Project_1\Header\register.html" target=”_blank”>Register</a></li>
+                        <li><a href="F:\Project_1\Header\profile.html" target=”_blank”>Profile</a></li>
+                        <li><a href="F:\Project_1\Header\orders.html" target=”_blank”>Order History</a></li>
+                    </ul>
+                </div><br>
+            </div>
+        </nav>
+
+            <h2>Current Time :</h2>
+            <p id="clock"></p>
+
+    </header>
+
+    <main>
+        <section class="products">
+            <h2>Featured Products</h2>
+            <ul>
+                <li>
+                    <img src="https://m.media-amazon.com/images/I/61SUj2aKoEL._SL1500_.jpg" alt="Product 1" height="150" width="150">
+                    <h3>Product 1</h3>
+                    <p> Description of product 1</p>
+                    <p>Price: $19.99</p>
+                    <button data-product-id="1">Add to Cart</button>
+                </li>
+                <li>
+                    <img src="https://m.media-amazon.com/images/I/41cVtkW0TzL._SX679_.jpg" alt="Product 2" height="150" width="150">
+                    <h3>Product 2</h3>
+                    <p> Description of product 2</p>
+                    <p>Price: $29.99</p>
+                    <button data-product-id="2">Add to Cart</button>
+                </li>
+                <li>
+                    <img src="https://m.media-amazon.com/images/I/71qftwk-6AL._SL1500_.jpg" alt="Product 3" height="150" width="150">
+                    <h3>Product 3</h3>
+                    <p> Description of product 3</p>
+                    <p>Price: $39.99</p>
+                    <button data-product-id="3">Add to Cart</button>
+                </li>
+                <li>
+                    <img src="https://m.media-amazon.com/images/I/71K84j2O8wL._SL1500_.jpg" alt="Product 4" height="150" width="150">
+                    <h3>Product 4</h3>
+                    <p> Description of product 4</p>
+                    <p>Price: $49.99</p>
+                    <button data-product-id="4">Add to Cart</button>
+                </li>
+                <li>
+                    <img src="https://m.media-amazon.com/images/I/81Os1SDWpcL._SL1500_.jpg" alt="Product 5" height="150" width="150">
+                    <h3>Product 5</h3>
+                    <p> Description of product 5</p>
+                    <p>Price: $59.99</p>
+                    <button data-product-id="5">Add to Cart</button>
+                </li>
+                <li>
+                    <img src="https://m.media-amazon.com/images/I/71iyBsDDwQL._SL1500_.jpg" alt="Product 6" height="150" width="150">
+                    <h3>Product 6</h3>
+                    <p> Description of product 6</p>
+                    <p>Price: $69.99</p>
+                    <button data-product-id="6">Add to Cart</button>
+                </li>
+            </ul>
+        </section>
+        <br>
+             <hr id="hr1">
+        <br>
+        <section class="categories">
+            <h2>Categories</h2>
+            <ul>
+                <li><img class="im" src="https://thumbs.dreamstime.com/b/best-seller-red-leather-label-price-tag-realistic-badge-vector-illustration-208946991.jpg">&ensp;<button><a href="F:\Project_1\Categories\category1.html" target=”_blank”>Best Seller</a></button></li>
+                <li><img class="im" src="https://i.insider.com/5ee799d7aee6a86a1774d7c4?width=700">&ensp;<button><a href="F:\Project_1\Categories\category2.html" target=”_blank”>Home & Kitchen</a></button></li>
+                <li><img class="im" src="https://i.pinimg.com/originals/49/a9/a1/49a9a1368d69e61c547ec134119631ae.jpg">&ensp;<button><a href="F:\Project_1\Categories\category3.html" target=”_blank”>Fashion</a></button></li>
+                <li><img class="im" src="https://t4.ftcdn.net/jpg/03/64/41/07/360_F_364410756_Ev3WoDfNyxO9c9n4tYIsU5YBQWAP3UF8.jpg">&ensp;<button><a href="F:\Project_1\Categories\category4.html" target=”_blank”>Electronics</a></button></li>
+                <li><img class="im" src="https://imgmedia.lbb.in/media/2023/11/65670566a76cdb2329e0ccd8_1701250406508.jpg">&ensp;<button><a href="F:\Project_1\Categories\category5.html" target=”_blank”>Gift ideas</a></button></li>
+                <li><img class="im" src="https://imageio.forbes.com/specials-images/imageserve/5f85be4ed0acaafe77436710/Stack-books-isolated-3d-rendering/960x0.jpg?height=507&width=711&fit=bounds">&ensp;<button><a href="F:\Project_1\Categories\category6.html" target=”_blank”>Books</a></button></li>
+            </ul>
+        </section>
+             <hr id="hr1">
+        <br>    
+        <section class="special-offers">
+            <h2>Special Offers</h2>
+            <ul>
+                <li>
+                    <img class="im" src="https://www.psdstamps.com/wp-content/uploads/2019/11/grunge-special-offer-label-png.png" alt="Offer 1" height="50" width="50">
+                    <h3>Offer 1</h3>
+                    <p> Description of offer 1</p>
+                    <p>Discount: 10% off</p>
+                </li>
+                <li>
+                    <img  class="im" src="https://www.psdstamps.com/wp-content/uploads/2019/11/grunge-special-offer-label-png.png" alt="Offer 2" height="50" width="50">
+                    <h3>Offer 2</h3>
+                    <p> Description of offer 2</p>
+                    <p>Discount: 20% off</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 Shopping Website. All rights reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="nav-item"><a  href="F:\Project_1\Footer\Policy.html" target=”_blank”>Privacy Policy Notice</a></li><br>
+                        <li class="nav-item"><a  href="F:\Project_1\Footer\condition.html" target=”_blank”>Condition Of Use</a></li><br>
+                        <li class="nav-item"><a  href="F:\Project_1\Header\contact.html" target=”_blank”>Contact Us</a></li><br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="respond.js"></script>
+
+</body>
+</html>

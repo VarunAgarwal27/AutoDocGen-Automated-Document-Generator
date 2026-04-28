@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOGIN</title>
+    <style>
+        body {
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+*{
+    font-family: cursive;
+    box-sizing: padding-box;
+}
+form {
+    width: 1000px;
+    border: 3px solid rgb(177, 142, 142);
+    padding: 20px;
+    background: #aaaaaa;
+    border-radius: 20px;
+    color: #fff;
+    transition: transform 1.1s ease;
+}
+form:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+	transform: scale(1.05);
+
+  }
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+input[type="text"], input[type="password"] {
+    display: block;
+    border: 2px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    animation: slide-in 0.5s ease-out;
+    background: #eee;
+    color: #838383;
+}
+
+label {
+    color: #ffffff;
+    font-size: 18px;
+    padding: 10px;
+}
+button {
+    float: right;
+    background: rgb(30, 144, 255);
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+    transition: all 0.5s ease;
+}
+button:hover{
+    background: rgb(0, 0, 0);
+    transform: scale(1.05);
+}
+button:hover{
+    opacity:.10;
+}
+.error {
+   background: #F2DEDE;
+   color: #0c0101;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+h1 {
+    text-align: center;
+    color: rgb(134, 3, 3);
+}
+a {
+    float: right;
+    background: rgb(183, 225, 233);
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 10px;
+    margin-right: 10px;
+    border: none;
+    text-decoration: none;
+}
+a:hover{
+    opacity:.7;
+}
+@keyframes slide-in {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+input[type="text"], input[type="password"] {
+    display: block;
+    border: 2px solid #ccc;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    animation: slide-in 0.3s ease-out;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: rgb(30, 144, 255);
+    box-shadow: 0 0 5px rgb(30, 144, 255);
+}
+.nav-item {
+    display: flex;
+    align-items: center !important;
+  } 
+
+  footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+li.nav-item {
+  margin: 0 10px;
+}
+    </style>
+</head>
+<body>
+    <img src="https://pngimg.com/uploads/amazon/amazon_PNG7.png" alt="Shopping Website Logo" height="15%" width="auto">
+    <br><br>
+    <form action="#" method="post">
+        <h2>LOGIN</h2>
+        <label>User Name</label>
+        <input type="text" name="uname" placeholder="User Name" required><br>
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Password" required><br> 
+        <button type="submit">Login</button>
+    </form>
+    <br><br>
+    <footer>
+        <ul>
+            <li class="nav-item"><a  href="F:\Project_1\Header\register.html" target=”_blank”>Register here</a></li><br>
+            <li class="nav-item"><a  href="F:\Project_1\Footer\Policy.html" target=”_blank”>Privacy Policy Notice</a></li><br>
+            <li class="nav-item"><a  href="F:\Project_1\Footer\condition.html" target=”_blank”>Condition Of Use</a></li><br>
+            <li class="nav-item"><a  href="F:\Project_1\Header\contact.html" target=”_blank”>Contact Us</a></li><br>
+        </ul>
+    </footer>
+</body>
+</html>
