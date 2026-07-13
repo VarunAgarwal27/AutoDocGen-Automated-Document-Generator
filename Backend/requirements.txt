@@ -10,3 +10,4 @@ SQLAlchemy
 alembic
 reportlab
 markdown
+docx
