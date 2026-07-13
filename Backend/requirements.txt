@@ -11,3 +11,4 @@ alembic
 reportlab
 markdown
 python-docx
+beautifulsoup4
