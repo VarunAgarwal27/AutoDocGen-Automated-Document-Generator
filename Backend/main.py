@@ -1,3 +1,4 @@
+import os
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -16,12 +17,18 @@ app = FastAPI(title="AutoDocGen")
 def startup_event():
     create_tables()
 
+frontend_url = os.getenv("FRONTEND_URL")
+
+origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173"
+]
+if frontend_url:
+    origins.append(frontend_url)
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173"
-    ],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -39,6 +46,6 @@ app.include_router(projects_router)
 def health_check():
     return {"status": "AutoDocGen backend is running 🚀"}
 
-import os
+
 print("GROQ KEY FOUND:", bool(os.getenv("GROQ_API_KEY")))
 
