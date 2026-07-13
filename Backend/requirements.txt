@@ -9,3 +9,4 @@ psycopg2-binary
 SQLAlchemy
 alembic
 reportlab
+markdown
