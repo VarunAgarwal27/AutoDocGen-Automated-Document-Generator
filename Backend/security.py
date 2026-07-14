@@ -1,20 +1,31 @@
+import os
+import bcrypt
 from datetime import datetime, timedelta
 from jose import jwt, JWTError
-from passlib.context import CryptContext
-import os
+
 SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+def hash_password(password: str) -> str:
+    # Convert password to bytes and hash using bcrypt
+    password_bytes = password[:72].encode('utf-8')
+    salt = bcrypt.gensalt()
+    hashed = bcrypt.hashpw(password_bytes, salt)
+    return hashed.decode('utf-8')
 
-def hash_password(password: str):
-    return pwd_context.hash(password[:72])
-
-def verify_password(plain_password: str, hashed_password: str):
-    return pwd_context.verify(plain_password[:72], hashed_password)
+def verify_password(plain_password: str, hashed_password: str) -> bool:
+    try:
+        # Verify plain password bytes against hashed password bytes
+        return bcrypt.checkpw(
+            plain_password[:72].encode('utf-8'),
+            hashed_password.encode('utf-8')
+        )
+    except Exception:
+        return False
 
 def create_access_token(email: str):
+    # Use datetime.now(timezone.utc) for modern python versions, or keep utcnow
     payload = {
         "sub": email,
         "exp": datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
