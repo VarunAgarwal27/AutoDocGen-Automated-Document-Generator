@@ -13,7 +13,7 @@ export default function Dashboard() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/projects/my", {
+    fetch(`${import.meta.env.VITE_API_URL || "http://127.0.0.1:8000"}/projects/my`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -50,7 +50,7 @@ export default function Dashboard() {
       await analyzeProject(projectId);
 
       const docsRes = await fetch(
-        `http://127.0.0.1:8000/projects/${projectId}/docs`,
+        `${import.meta.env.VITE_API_URL || "http://127.0.0.1:8000"}/projects/${projectId}/docs`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
