@@ -16,8 +16,9 @@ try {
 }
   const downloadFile = async (format) => {
   try {
+    const base_url = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
     const res = await fetch(
-      `http://127.0.0.1:8000/projects/${projectId}/export?format=${format}`,
+      `${base_url}/projects/${projectId}/export?format=${format}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
